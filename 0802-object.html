@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Object
+    </title>
+  </head>
+  <body>
+
+    <script>
+      // const product = {
+      //   name: 'socks',
+      //   price: 1090
+      // };
+
+      // console.log(product);
+      // console.log(product.name);
+      // console.log(product.price);
+
+      // product.name = 'cotton socks';
+      // console.log(product);
+
+      // product.newProperty = true;
+      // console.log (product);
+
+      // delete product.newProperty;
+      // console.log (product);
+
+      // const product2 = {
+      //   name: 'shirt',
+      //   'delivery-time': '1 day',
+      //   rating :{
+      //     stars: 4.5,
+      //     count: 87
+      //   },
+      //   fun: function function1(){
+      //     console.log ('function isnside object.');
+      //   }
+      // };
+
+      // console.log(product2);
+      // console.log(product2.name);
+      // console.log(product2['name']);
+      // console.log(product2['delivery-time']);
+
+      // console.log(product2.rating.stars);
+      // product2.fun();
+
+      // console.log (JSON.stringify(product2));
+      // //// convert from js to json as string 
+      // //// not support function in object or method
+
+
+      // const jsonString = JSON.stringify(product2);
+      // console.log (JSON.parse(jsonString));
+      // /////json.parse covert from json to js 
+      
+
+      // ////localStorage use to store data when we refresh page
+      // //// it support only string
+      // //// that's why we use json to convert every thing to string and store it in local storage
+      // //// to understand localstorage u must take a look at 0802-rock--.html file
+      // //// we use localStorage.getItem() and localStorage.setItem()
+
+
+
+
+
+
+      // const object1 = {
+      //   message: 'hello',
+      // };
+      // // inside {} call it reference
+
+      // const object2 = object1;
+
+      // object1.message = 'Good job!';
+
+      // console.log (object1); ////same
+      // console.log (object2); ////same 
+      // ////out is Good job! both 
+
+      // const object3 = {
+      //   message: 'Good job!'
+      // };
+
+      // console.log(object3 === object1);
+      // ///// even if it have the same message but still false in console
+
+      // console.log(object2 === object1);
+      // //// it has assign object2 = object1 above so it's true
+
+      // //// it's comparing the reference, not the value inside
+
+      // const object4 = {
+      //   message: 'Good job!',
+      //   price: 799 
+      // };
+
+
+      // //const message = object4.message;
+
+      // ////if the variable name and the property name are the same we can write a shortcut like below
+
+      // //// this call destructuring
+      // ////const { message } = object4;
+      // const { message, price } = object4;
+      // console.log(message);
+      // console.log(price);
+      
+      // const object5 = {
+      //   //message: message,//// right one is the variable above
+      //   message, // this is from variable too 
+      //   // this call shorthand
+
+      //   // method: function function1(){
+      //   //   console.log('method');
+      //   // }
+      //   //// same but the below one is short than above
+      //   method(){
+      //     console.log ('method');
+      //   }
+      //   //// this call shorthand method
+
+      // }
+
+      // console.log (object5);
+      // object5.method();
+
+
+
+      ////// EXERCISE
+      //// 8a
+      // const basketballProduct = {
+      //   name: 'basketball',
+      //   price: 2025,
+      // };
+
+      // console.log (basketballProduct);
+
+      // basketballProduct.price += 500;
+
+      // basketballProduct['delivery-time']= '3 days';
+
+      // console.log(basketballProduct);
+
+
+      function comparePrice(product1, product2){
+        if (product1.price > product2.price){
+          return product2;
+        }else {
+          return product1;
+        }
+      }
+      
+      const product1 = {
+        name: 'sting',
+        price: 2000
+      };
+
+      const product2 = {
+        name: 'coca-cola',
+        price: 2500
+      };
+
+      console.log(comparePrice(product1, product2));
+
+      function isSameProduct(product1, product2){
+        if ( product1.name === product2.name && product1.price === product2.price){
+          return true;
+        }else {
+          return false;
+        }
+      }
+
+      console.log(isSameProduct(product1, product2));
+
+      console.log('Good morning'.toLowerCase());
+
+      console.log('test'.repeat(3));
+      
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

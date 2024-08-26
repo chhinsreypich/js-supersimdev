@@ -1,0 +1,40 @@
+body{
+  background-color: black;
+}
+.black-style{
+  background-color: rgb(60, 60, 60);
+  border: none;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 35px;
+  font-size: 27px;
+  margin: 3px 3px;
+
+}
+.clear-style{
+  background-color: rgb(60, 60, 60);
+  border: none;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 35px;
+  font-size: 18px;
+  margin: 3px 3px;
+}
+.yellow-style{
+  background-color: rgb(228, 139, 35);
+  border: none;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 35px;
+  font-size: 27px;
+  margin: 3px 3px;
+}
+.show-it{
+  color: white;
+  font-family: arial;
+  font-size: 50px;
+  height: 30px;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      DOM Project
+    </title>
+  </head>
+  <body>
+    
+  
+    <p >
+      Youtube Subscribe Button
+    </p>
+
+    <button onclick="
+      subscribe();
+    " class="js-subscribe-button">
+      Subscribe
+    </button>
+
+
+
+
+    
+    <p>
+      Amazon Shipping Calculator
+    </p>
+
+    <input type="text" placeholder="Cost of order"
+      class="js-cost-input" 
+      onkeydown="enterToCalculate(event); "> 
+
+    <button onclick="
+      calculateTotal();
+    ">
+      Calculate
+    </button>
+
+    <p class="js-total-cost"></p>
+
+
+
+    <p>I can read your mind</p>
+
+    <p>enter a number </p>
+
+    <input type="text" class="enter">
+
+    <button onclick="
+      enterIt();
+    ">  
+      Enter
+    </button>
+
+    <p class="result-of-enter"></p>
+
+
+
+    
+
+    <button class="a-button">9a</button>
+
+    <button class="b-button">9b</button>
+    <br>
+    <p></p> 
+    
+    <button onclick="
+      document.querySelector('.heads-tails').innerHTML = 'You chose: heads'; ">
+      heads
+    </button>
+
+
+    <button onclick="
+        document.querySelector('.heads-tails').innerHTML = 'You chose: tails'; ">
+       tails
+    </button>
+
+
+    <p class="heads-tails"></p>
+
+
+
+
+    <input type="text" placeholder="Name"
+      class="name-input"
+      onkeydown = "enterToSubmit(event); ">
+      
+
+    <button class="submit-button" onclick="
+      clickSubmit();"
+     >
+      Submit
+    </button>
+
+    <p class="your-name"></p>
+
+
+
+
+
+
+
+ 
+    
+    <script>
+
+      function enterToSubmit(event){
+        if (event.key){
+          clickSubmit();
+        }
+      }
+      
+      function clickSubmit(){
+
+        const inputText = document.querySelector('.name-input');
+
+        let textText = inputText.value;
+
+        document.querySelector('.your-name').innerHTML = `Your name is: ${textText}`;
+      }
+
+      console.log(document.querySelector('.a-button'));
+      ////don't add number at the beginning of class
+
+      document.querySelector('.b-button').innerHTML = '9b done!';
+
+     
+
+
+
+
+
+
+      function enterIt (){
+        const inputEnterElement = document.querySelector('.enter');
+
+        let yourMind = Number(inputEnterElement.value);
+
+        document.querySelector('.result-of-enter').innerHTML = `You think about ${yourMind}.`;
+      }
+
+
+
+
+
+        
+      function enterToCalculate(event){
+        if (event.key){
+          calculateTotal();
+        }
+      }
+
+
+      function calculateTotal(){
+        const inputElement = document.querySelector('.js-cost-input');
+
+        let cost = Number(inputElement.value);
+
+        if (cost < 40){
+          cost += 10;
+        }else if (cost > 40){
+          cost = Number(inputElement.value);
+        }
+
+        document.querySelector('.js-total-cost').innerHTML = `Total cost: $${cost}`;
+      }
+
+
+
+
+
+
+      function subscribe(){
+        const buttonElement = document.querySelector('.js-subscribe-button');
+
+        if (buttonElement.innerText === 'Subscribe'){
+          buttonElement.innerHTML = 'Subscribed';
+        } else {
+          buttonElement.innerHTML = 'Subscribe';
+        }
+      }
+      
+
+   </script>
+  </body>
+</html>

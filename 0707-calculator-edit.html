@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Calculator
+  </title>
+</head>
+<body>
+  <p>
+    <button onclick="
+      updateCalculator('1');
+    ">1</button>
+
+    <button onclick="
+      updateCalculator('2');
+    ">2</button>
+
+    <button onclick="
+      updateCalculator('3');
+    ">3</button>
+
+    <button onclick="
+      updateCalculator(' + ');
+    ">+</button>
+
+  </p>
+
+  <p>
+    <button onclick="
+      updateCalculator('4');
+    ">4</button>
+
+    <button onclick="
+      updateCalculator('5');
+    ">5</button>
+
+    <button onclick="
+      updateCalculator('6');
+    ">6</button>
+
+    <button onclick="
+      updateCalculator(' - ');
+    ">-</button>
+
+  </p>
+
+
+  <p>
+    <button onclick="
+      updateCalculator('7');
+    ">7</button>
+
+    <button onclick="
+      updateCalculator('8');
+    ">8</button>
+
+    <button onclick="
+      updateCalculator('9');
+    ">9</button>
+
+    <button onclick="
+      updateCalculator(' * ');
+    ">*</button>
+
+  </p>
+
+  <p>
+    <button onclick="
+      updateCalculator('0');
+    ">0</button>
+
+    <button onclick="
+      updateCalculator('.');
+    ">.</button>
+
+    <button onclick="
+      console.log(eval(calculator));
+    ">=</button>
+
+    <button onclick="
+      updateCalculator(' / ');
+    ">/</button>
+
+  </p>
+
+  <button onclick="
+    console.log(calculator = '');
+  ">Clear</button>
+  
+
+  <script>
+    
+    let calculator = '';
+
+    function updateCalculator(numOrOperator){
+      calculator += numOrOperator;
+      console.log (calculator);
+
+    }
+
+
+  </script>
+  
+</body>
+
+</html>

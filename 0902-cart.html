@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Cart
+  </title>
+  <body>
+
+    <button onclick="
+      console.log(`Cart quantity: ${cartQuantity}`);
+      displayCart();
+      ">Show quantity</button>
+
+    <button onclick="
+      updateCartQuantity(1);
+    ">Add to cart</button>
+
+    <button onclick="
+      updateCartQuantity(2);
+    ">+2</button>
+
+    <button onclick="
+      updateCartQuantity(3);  
+    ">+3</button>
+
+    <button onclick="
+      updateCartQuantity(4); 
+    ">+4</button>
+
+    <button onclick="
+      updateCartQuantity(5);
+    ">+5</button>
+
+    <button onclick="
+      updateCartQuantity(-1);
+    ">Remove from cart </button>
+
+    <button onclick="
+      updateCartQuantity(-2);
+    ">-2</button>
+
+    <button onclick="
+      updateCartQuantity(-3);
+     
+    ">-3</button>
+
+
+    <button onclick="
+      updateCartQuantity(0);
+    ">Reset</button>
+   
+
+    <p class="p-of-show" ></p>
+
+    
+
+
+
+    <script>
+      let cartQuantity = 0 ;
+
+
+      function updateCartQuantity(add){
+
+        if (cartQuantity + add > 10){
+          alert('The cart is full.');
+
+        }else if (cartQuantity + add< 0){
+          alert('No enough items in the cart.');
+
+        }else {
+          cartQuantity += add;
+          //console.log(`Cart quantity: ${cartQuantity}`)
+          displayCart();
+        }
+      }
+
+      function displayCart (){
+        document.querySelector('.p-of-show').innerHTML = `Cart quantity: ${cartQuantity}`
+      }
+
+
+    </script>
+  </body>
+</head>
+
+</html>

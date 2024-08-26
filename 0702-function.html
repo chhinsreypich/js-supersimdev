@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Function
+    </title>
+  </head>
+  <body>
+
+
+    <script>
+      function greet(name){
+        
+        if (!name)
+          console.log('Hi there!');
+        else
+          console.log(`Hello! ${name}`);
+
+      }
+
+      greet('thomad');
+      greet('simon');
+      greet();
+
+
+
+
+      function convertToFahrenheit(celsius){
+        return fahrenheit = (celsius * 9 / 5 ) + 32;
+      }
+
+      console.log( convertToFahrenheit(25));
+      console.log( convertToFahrenheit(15));
+      console.log( convertToFahrenheit(55));
+
+
+
+      function convertToCelsius(fahrenheit){
+        return celsius = (fahrenheit - 32 ) * 5 / 9 ;
+      }
+
+      console.log( convertToCelsius(77));
+      console.log( convertToCelsius(302));
+      console.log( convertToCelsius(131));
+
+
+
+      // function covertTemperature(degree, unit){
+      //   if ( unit === 'C'){
+      //     return fahrenheit = (degree * 9 / 5 ) + 32;
+      //   }else if ( unit === 'F'){
+      //     return celsius = (degree - 32 ) * 5 / 9 ;
+      //   }
+      // }
+
+      // console.log(covertTemperature(86, 'F'));
+      // console.log(covertTemperature(25, 'C'));
+
+
+
+      function covertTemperature(degree, unit){
+        if ( unit === 'C'){
+          const result = convertToFahrenheit(degree)
+          return `${result} F` ;
+        }else if ( unit === 'F'){
+          const result = convertToCelsius(degree)
+          return `${result} C` ;;
+        }
+      }
+      console.log(covertTemperature(86, 'F'));
+      
+
+    </script>
+  </body>
+</html>

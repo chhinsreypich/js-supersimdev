@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Advanced Function
+    </title>
+  </head>
+  <body>
+    <button 
+      onclick=""
+      class="js-button"
+    >Click
+    </button>
+
+    <script>
+      /*
+      const buttonElement = document.querySelector('.js-button');
+
+      //// onclick
+      //// the word after on is event
+      //// so the click in bracket is yor pi ah onclick ng
+      buttonElement.addEventListener('click', () => {
+        console.log('click');
+      });
+      
+
+
+      buttonElement.addEventListener('click', () => {
+        console.log('click2');
+      });
+      //// ber yg dak mdong tang 2 ng vea run oy tang pi 
+
+    */
+
+    /*
+
+      const buttonElement = document.querySelector('.js-button');
+
+      const eventListener = () => {
+        console.log('click');
+      }
+
+      buttonElement.addEventListener('click', eventListener);
+        
+      buttonElement.removeEventListener('click', eventListener);
+
+      buttonElement.addEventListener('click', () => {
+        console.log('click2');
+      });
+      */
+
+      /*
+      greeting();
+      function greeting(){
+        console.log('hello');
+      }
+      greeting();
+
+      const num = 2;
+
+      const function1 = function(){
+        console.log('hello2');
+      };
+      /// this mean set function in variable
+      /// function also is value toooo
+
+
+      console.log(function1);
+      console.log(typeof function1);
+
+      const object1 = {
+        num: 2,
+        fun: function(){
+          console.log('hello3');
+        }
+      };
+      
+      object1.fun();
+      console.log(object1.num);
+
+      //we also can pass value into a function
+      function display(param){
+        console.log(param);
+      }
+      display(2);
+
+      /// we can also passs function into function
+      function run(param){
+        param();//// cuz param is the function (below)
+      }
+      run(function() {
+        console.log('hello4');
+      });
+
+      */
+
+      /*
+      setTimeout(function(){
+        console.log('timeout');
+      }, 3000);
+      // settimeout( what we want to show, time to get out)
+      // 3000 mean 3s
+      // it must uses millisecond
+
+      console.log('next line');
+      //// it display next line first 
+      // it no need to wait the timeout show first
+      // cuz timem out need 3s to show up
+      // it doesn't actually wait for the three second to finish, it just sets up the timer and immediately goes to the next line.
+      // so that's why the next line display first
+      // this call Asynchronous Code
+      // it means the computer won't wait for this line to finish before going to the next line. 
+      // meansss pel mor dol settimeout ng vea set time oy der hz jol console bos next line hz pel dol time vea lout mor
+
+
+      // Synchronous Code will wait for one line to finish before going to the next line
+      
+      setInterval(function(){
+        console.log('interval');
+      }, 3000);
+      // ah nis run the code in every 3 second
+
+      console.log('next line 2');
+      // ah nis doch ah ler
+      
+      */
+
+      /*
+      [
+        'make dinner',
+        'wash dishes', 
+        'watch you tube'
+      ].forEach(function (value, index) {
+        if ( value === 'wash dishes'){
+          return ;
+          //// return does the same thing as contiue
+        }
+
+
+        console.log(index);
+        console.log(value);
+      });
+      // in for each doesn't have continue
+      // so we use return instead
+
+      // if we need to use break;
+      // then it's better to use a regular for loop
+      */
+
+
+
+      /*
+      //// Regular function
+      const regularFunction = function (param, param2){
+        console.log('hello');
+        return 5;
+      };
+      regularFunction();
+
+
+      ///// Arrow function
+
+      const arrowFunction = (param, param2) => {
+        console.log('hello');
+        return 5;
+      };
+      arrowFunction();
+
+
+//// different that arrow has
+      // const oneParam = (param) => {
+      //   console.log(param + 1);
+      // }
+      // oneParam(2);
+
+      ////or 
+      // if we have only one param in (), we can also write it without ()
+      const oneParam = param => {
+        console.log(param + 1);
+      }
+      oneParam(2);
+      
+
+      //// Example
+      // const oneLine = () => {
+      //   return 2 + 3;
+      // }
+      
+      /// if we have only one line like above, we can write like below
+      /// ber mean tah ah return tah muy tehh jg dak tah ah na ey del yg jg return ng mor;
+      const oneLine = () =>  2 + 3 ;
+      console.log(oneLine());
+
+      [
+        'make dinner',
+        'wash dishes', 
+        'watch you tube'
+      ].forEach((value, index) => {
+        if ( value === 'wash dishes'){
+          return ;
+          //// return does the same thing as contiue
+        }
+        console.log(index);
+        console.log(value);
+      });
+
+      /// Passing a function into another function like foreach, it's recommended to use arrow functions because it makes our code easier to read
+      */ 
+
+      /*
+      const object2 = {
+        //// arrow function
+        method: () => {
+
+        },
+        //// shorthand is easier to read then arrow in this case
+        method: () => {
+
+        },
+      };
+      */
+
+
+
+
+      // .filter()
+      // 1. Create a new array[]
+      // 2. return true, and put value in array
+
+      // .filter means create new array
+      // if it true it will put the value into the new array
+      // if false it will not put the value into the new array
+
+      console.log ([1, -3, 5].filter((value, index) => {
+        /*
+        if (value >= 0 ){
+          return true;
+        } else {
+          return false;
+        }
+        */
+        return value >= 0;
+       
+      }));
+
+      // .map()
+      // 1. Create a new array[]
+      // 2. Whatever we return , it added to new array
+
+      console.log([1, 1, 3].map((value, index) => {
+        return value * 2;
+      }));
+//////// same cuz it have only one line with return
+      console.log([1, 1, 3].map(value => value * 2 ));
+
+
+      // Closure 
+      // - if a function has access to a value
+      // - it will always have access to that value
+      // he shows it how it works in todo list project
+      // just to know or good to know about it
+      
+
+
+    </script>  
+  </body>
+</html>

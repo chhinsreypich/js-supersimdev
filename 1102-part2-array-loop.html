@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      array and loop
+    </title>
+  </head>
+  <body>
+
+
+
+    <script>
+      
+      let word = [ 'hello', 'good', 'search','okayy'];
+
+      let index = -1 ;
+
+      for ( let i = 0 ; i < word.length ; i++){
+        if ( word[i] === 'search'){
+          index = i ;
+        }
+      }
+
+      console.log(index);
+
+      word = [ 'notot', 'found'];
+      index = -1;
+
+      for (let i = 0 ; i < word.length ; i++){
+        if ( word[i] === 'search'){
+          index = i;
+        }
+      }
+
+      console.log(index);
+
+    </script>  
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Messager
+    </title>
+  </head>
+  <body>
+
+    <!-- 12c 
+    <button 
+      class="js-start-button "
+    >Start
+    </button>
+-->
+
+    <!-- 12d
+    <button 
+      class="js-start-button-second"
+    >Start
+    </button> 
+-->
+
+    <!-- 12e
+    <button 
+      class="js-add-to-cart-button"
+    >Add to Cart
+    </button>
+    <p class="p-of-add"></p> 
+-->
+
+    <!-- 12f
+    <button 
+      class="js-add-to-cart-button"
+    >Add to Cart
+    </button>
+    <p class="p-of-add"></p> -->
+
+    <!-- 12h-->
+    <button
+      onclick="
+        messages += 1;"
+    >Add
+    </button>
+
+    <button
+      onclick="
+        messages -= 1;"
+    >Remove
+    </button> 
+ 
+<!--
+    <button
+      onclick="
+        messages++;"
+    >Add
+    </button>
+
+    <button
+      onclick="
+        messages--;"
+    >Remove
+    </button> -->
+
+
+    <script>
+        /*
+      const add = function(){
+        console.log(2 + 3);
+      }
+      add();
+      add();
+
+      function runTwice(fun){
+        fun();
+        fun();
+      }
+      runTwice(function (){
+        console.log('12b');
+      });
+      runTwice(add);
+      */
+
+      /* 12c
+      let finish ;
+      document.querySelector('.js-start-button')
+        .addEventListener ('click',() => {startToFinish()});
+      function startToFinish(){
+        finish = setTimeout(function(){
+          document.querySelector('.js-start-button').innerHTML = 'Finished!';
+        }, 1000);
+        ;
+      }
+       */
+
+
+      /* 12d
+      let finishedSecond;
+      document.querySelector('.js-start-button-second')
+        .addEventListener('click', () => {loadingToFinish()});
+
+      function loadingToFinish(){
+        finishedSecond = setTimeout(function(){
+          document.querySelector('.js-start-button-second').innerHTML = 'Finished!';
+        }, 1000);
+
+        document.querySelector('.js-start-button-second').innerHTML = 'Loading...';
+      } */
+      
+
+      /* 12e
+      let add ;
+
+      document.querySelector('.js-add-to-cart-button')
+        .addEventListener('click', () => {addDisplay()} )
+
+      function addDisplay(){
+        add = setTimeout(function(){
+          document.querySelector('.p-of-add').innerHTML = '';
+        }, 2000);
+        document.querySelector('.p-of-add').innerHTML = 'Added';
+      }
+      */
+
+
+      /*
+      /// modify 12e to 12f 
+      let timeoutId;
+
+      document.querySelector('.js-add-to-cart-button')
+        .addEventListener('click', () => {addDisplay()})
+
+      function addDisplay(){ 
+        let add = document.querySelector('.p-of-add');
+        
+        add.innerHTML = 'Added';
+
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(function(){
+          add.innerHTML = '';
+        }, 2000);
+
+      } */
+
+      /*
+      // ah nis for tittle tehh
+        setInterval(function (){
+          if(document.title === 'Messager'){
+          document.title = '(2) News messages';
+          } else {
+            document.title = 'Messager';
+          }
+        }, 1000);
+       */
+
+       /* 12h
+       let messages = 2;
+
+       setInterval(function (){
+          if(document.title === 'Messager'){
+          document.title = `(${messages}) News messages`;
+          } else {
+            document.title = 'Messager';
+          }
+        }, 1000);
+        */
+
+
+        let messages = 2;
+
+        setInterval(function (){
+          if(document.title === 'Messager'&& messages > 0){
+          document.title = `(${messages}) News messages`;
+          } else if(messages === 0){
+            document.title = 'Messager';
+            messages = 0;
+          } else {
+            document.title = 'Messager';
+          }
+        }, 1000);
+
+
+    </script>  
+  </body>
+</html>

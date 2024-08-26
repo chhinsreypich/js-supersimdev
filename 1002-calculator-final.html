@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Calculator
+  </title>
+  <link rel="stylesheet" href="style/1002-calculator.css">
+</head>
+<body>
+  <p class="display show-it"></p>
+  <p>
+    <button 
+      onclick="updateCalculator('1');"
+      class="black-style"
+      >1</button>
+
+    <button 
+      onclick="updateCalculator('2');"
+      class="black-style"
+      >2</button>
+
+    <button 
+      onclick="updateCalculator('3');"
+      class="black-style"
+    >3</button>
+
+    <button 
+      onclick="updateCalculator(' + ');"
+      class="yellow-style"
+    >+</button>
+
+  </p>
+
+  <p>
+    <button 
+      onclick="updateCalculator('4');"
+      class="black-style"
+    >4</button>
+
+    <button 
+      onclick="updateCalculator('5');"
+      class="black-style"
+    >5</button>
+
+    <button 
+      onclick="updateCalculator('6');"
+      class="black-style"
+    >6</button>
+
+    <button 
+      onclick="updateCalculator(' - ');"
+      class="yellow-style"
+    >-</button>
+
+  </p>
+
+
+  <p>
+    <button 
+      onclick="updateCalculator('7');"
+      class="black-style"
+    >7</button>
+
+    <button 
+      onclick="updateCalculator('8');"
+      class="black-style"
+    >8</button>
+
+    <button 
+      onclick="updateCalculator('9');"
+      class="black-style"
+    >9</button>
+
+    <button 
+      onclick="updateCalculator(' * ');"
+      class="yellow-style"
+    >*</button>
+
+  </p>
+
+  <p>
+    <button 
+      onclick="updateCalculator('0');"
+      class="black-style"
+    >0</button>
+
+    <button 
+      onclick="updateCalculator('.');"
+      class="black-style"
+    >.</button>
+
+    <button 
+      onclick="calculator = (eval(calculator));
+        displayCalculator()
+        localStorage.setItem('calculator', calculator);"
+      class="black-style"
+    >=</button>
+
+    <button 
+      onclick="updateCalculator(' / ');"
+      class="yellow-style"
+    >/</button>
+
+  </p>
+
+  <button 
+    onclick="console.log(calculator = '');
+      updateCalculator('');
+      localStorage.setItem('calculator', calculator);"
+    class="clear-style"
+  >Clear</button>
+  
+
+  <script src="script/1002-calculator-final.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Coin filp
+    </title>
+  </head>
+  <body>
+    
+    <script>
+      const randomNumber = Math.random();
+
+      let result = '';
+
+      
+
+      if ( randomNumber < 0.5 ){
+        result = 'heads';
+      }else {
+        result = 'tails';
+      }
+      // randomNumber < 0.5 ? result = 'heads' : 'tails';
+
+      const guess = 'heads';
+      if(guess === result){
+        console.log('You win.')
+      }else{
+        console.log('You lose.')
+      }
+      //guess === result ? console.log('You win.') :'You lose.' ;
+
+
+    </script>
+
+
+
+
+  </body>
+</html>
